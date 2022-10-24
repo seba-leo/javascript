@@ -29,8 +29,7 @@
             alert('el dolar bolsa cotiza a ' + UsdBolsa +' podes comprar '+ conversion +' dolares')
             total= total +conversion
             console.log("tu compra total es de " + total + " usd bolsa")
-        }
-        else {
+        }else {
             console.log("elige un numero del 1 al 3 para realizar la compra")
             alert("elige un numero del 1 al 3 para realizar la compra")
         }
@@ -47,16 +46,20 @@
             Question=parseInt(prompt("Ingrese el monto total en pesos"))
         }
         else if(Question2 === 1){
-            Question=parseInt(prompt("Ingrese el monto total en pesos"))
             Buy=parseInt(prompt("¿A que tipo de cambio queres comprar? 1.CCL - 2.dolar oficial - 3.dolar bolsa"))
         }else if(Question2>=3){
                 console.log("ingresa un numero del 1 al 2")
                 while(Question2>=3){   
                     alert("ingresa un numero del 1 al 2")
                     Question2 = parseInt(prompt('Quieres seguir comprando? 1.Si - 2.No')) 
+                    if (Question2===1){
+                        Question=parseInt(prompt("Ingrese el monto total en pesos"))
+                    }else{ seguirComprando = false
+                        alert('tu compra total es de '+total + 'usd');
+                        console.log('tu compra total es de '+total + 'usd')}
                 }
-                Question=parseInt(prompt("Ingrese el monto total en pesos"))
-        }else {
+        } 
+        else {
             seguirComprando = false
             alert('tu compra total es de '+total + 'usd');
             console.log('tu compra total es de '+total + 'usd')
