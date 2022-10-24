@@ -1,4 +1,5 @@
 //bucle
+
     let Question=parseInt(prompt("Ingrese el monto total en pesos"))
     let CCL=100;
     let UsdOf=200;
